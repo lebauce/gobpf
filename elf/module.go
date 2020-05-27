@@ -53,8 +53,7 @@ import (
 #include <linux/if_link.h>
 #include <linux/rtnetlink.h>
 
-#include "lib/nlattr.c"
-#include "lib/netlink.c"
+int bpf_set_link_xdp_fd(int ifindex, int fd, __u32 flags);
 
 static int perf_event_open_tracepoint(int tracepoint_id, int pid, int cpu,
                            int group_fd, unsigned long flags)
